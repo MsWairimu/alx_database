@@ -1,5 +1,3 @@
-import mysql.connector
-
 # Replace these values with your MySQL server credentials
 host = 'your_host'
 user = 'your_user'
