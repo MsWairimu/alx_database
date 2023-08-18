@@ -1,9 +1,9 @@
 import mysql.connector
 
 # Replace these values with your MySQL server credentials
-host = localhost
-user = Mswairimu
-password = Kabuu@20
+host = 'your_host'
+user = 'your_user'
+password = 'your_password'
 
 try:
     # Connect to the MySQL server
