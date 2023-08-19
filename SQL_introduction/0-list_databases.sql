@@ -1,15 +1,13 @@
--- Connect to the MySQL server and list initial databases sorted
-USE mysql;
+-- Retrieve the first 2 students from Batch ID=2
+-- because Batch 2 is the best!
+SELECT id, name
+FROM students
+WHERE batch_id = 2
+ORDER BY created_at DESC
+LIMIT 2;
 
--- Initial databases sorted
-SELECT SCHEMA_NAME
-FROM INFORMATION_SCHEMA.SCHEMATA
-ORDER BY SCHEMA_NAME;
+-- Create a new user 'Mswairimu'@'localhost'
+CREATE USER 'Mswairimu'@'localhost';
 
--- Create a new database
-CREATE DATABASE new_database;
-
--- Databases after creation of multiple databases
-SELECT SCHEMA_NAME
-FROM INFORMATION_SCHEMA.SCHEMATA
-ORDER BY SCHEMA_NAME;
+-- Retrieve a list of databases
+SHOW DATABASES;
