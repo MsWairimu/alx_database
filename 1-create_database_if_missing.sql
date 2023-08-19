@@ -1,0 +1,3 @@
+-- this script creates a database hbtn_0c_0
+
+CREATE DATABASE "hbtn_oc_0";
