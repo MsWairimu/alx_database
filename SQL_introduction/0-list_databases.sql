@@ -11,3 +11,6 @@ CREATE USER 'Mswairimu'@'localhost';
 
 -- Retrieve a list of databases
 SHOW DATABASES;
+
+SELECT name FROM sys.databases
+GO
