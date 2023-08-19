@@ -1,36 +1,15 @@
-# Replace these values with your MySQL server credentials
-host = 'your_host'
-user = 'your_user'
-password = 'your_password'
+-- Connect to the MySQL server and list initial databases sorted
+USE mysql;
 
-try:
-    # Connect to the MySQL server
-    connection = mysql.connector.connect(
-        host=host,
-        user=user,
-        password=password
-    )
-    
-    # Create a cursor object to interact with the database
-    cursor = connection.cursor()
-    
-    # Execute the query to get a list of databases
-    cursor.execute("SHOW DATABASES")
-    
-    # Fetch all the results
-    databases = cursor.fetchall()
-    
-    # Print the list of databases
-    print("List of databases:")
-    for db in databases:
-        print(db[0])
-    
-except mysql.connector.Error as err:
-    print("Error:", err)
+-- Show the initial list of databases sorted
+SELECT SCHEMA_NAME
+FROM INFORMATION_SCHEMA.SCHEMATA
+ORDER BY SCHEMA_NAME;
 
-finally:
-    # Close the cursor and connection
-    if cursor:
-        cursor.close()
-    if connection:
-        connection.close()
+-- Create a new database
+CREATE DATABASE new_database;
+
+-- Show the list of databases after creating a new one
+SELECT SCHEMA_NAME
+FROM INFORMATION_SCHEMA.SCHEMATA
+ORDER BY SCHEMA_NAME;
