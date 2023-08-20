@@ -1,8 +1,8 @@
--- Creating a new user if not exists
+-- Create the database if it doesn't exist
+CREATE DATABASE IF NOT EXISTS hbtn_0d_2;
+
+-- Create the user if it doesn't exist
 CREATE USER IF NOT EXISTS 'user_0d_2'@'localhost' IDENTIFIED BY 'user_0d_2_pwd';
 
--- Permitting the user to create a database
-CREATE SCHEMA IF NOT EXISTS hbtn_0d_2;
-
--- Granting the user all privileges
-GRANT ALL PRIVILEGES ON hbtn_0d_2.* TO 'user_0d_2'@'localhost';
+-- Grant SELECT privilege to the user for the hbtn_0d_2 database
+GRANT SELECT ON hbtn_0d_2.* TO 'user_0d_2'@'localhost';
