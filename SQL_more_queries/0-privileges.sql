@@ -18,3 +18,5 @@ FROM
     mysql.user
 WHERE
     user IN ('user_0d_1', 'user_0d_2');
+DROP USER IF EXISTS 'user_0d_1'@'localhost';
+DROP USER IF EXISTS 'user_0d_2'@'localhost';
