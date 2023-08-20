@@ -1,3 +1,4 @@
+-- this script lists all privileges of a MYSQL server
 SELECT
     user,
     host,
